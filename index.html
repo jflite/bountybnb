@@ -1,1 +1,440 @@
-index2.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BountyBNB</title>
+<style type="text/css"> 
+  .thanks {
+    display: none;
+  }
+  .signupsio.signupsio-submitted {
+    display: none;
+  }
+  .signupsio.signupsio-submitted + .thanks {
+    display: block;
+  }
+</style>
+<style>
+/* Basics */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+    background-image:url(background.jpg);
+}
+#container {
+    position: fixed;
+    width: 340px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	
+}
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+label {
+    color: #555;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+ -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+}
+p a:hover {
+    color: #555;
+}
+input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+input[type=text],
+input[type=password] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+	border: 1px solid #c7d0d2;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+-webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+	}
+input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b6bfc0;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+    border: 1px solid #a8c9e4;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+#lower {
+/*    background: #ecf2f5; */
+    width: 100%;
+    height: 69px;
+    margin-top: 20px;
+	  box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.check {
+    margin-left: 3px;
+	font-size: 11px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #acd6ef; /*IE fallback*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 1px solid #66add6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+input[type=submit]:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+    background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+    background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+.pop-up {position:absolute; top:0; left:-500em}
+.pop-up:target {position:static; left:0;}
+.popBox {
+  background:#ffffff;
+
+  /* alternatively fixed width / height and negative margins from 50% */
+  position:absolute; left:30%; right:30%; top:30%; bottom:30%;
+
+  z-index:1;
+  /* padding:1%; removed 17/07/2012 */
+  border:1px solid #3a3a3a;
+
+  /* CSS3 rounded corners, drop-shadow and opacity fade in */
+  -moz-border-radius:12px;
+  border-radius:12px;
+  -webkit-box-shadow:2px 2px 4px #3a3a3a;
+  -moz-box-shadow:2px 2px 4px #3a3a3a;
+  box-shadow:2px 2px 4px #3a3a3a;
+  opacity:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+:target .popBox {position:fixed; opacity:1;}
+
+.popBox:hover {box-shadow:3px 3px 6px #5a5a5a;}
+.lightbox {display:none; text-indent:-200em; background:#000; opacity:0.4; width:100%; height:100%; position:fixed; top:0; left:0; bottom:0; right:0;}
+:target .lightbox {display:block}
+.close {
+  position:absolute; top:-0.75em; right:-0.75em; display:block; width:1em; height:1em;
+  font:bold large/1 arial, sans-serif; text-align:center; text-decoration:none;
+  background:#000; border:3px solid #fff; color:#fff;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  -moz-box-shadow: 0 0 1px 1px #3a3a3a;
+  -webkit-box-shadow: 0 0 1px 1px #3a3a3a;
+  box-shadow: 0 0 1px 1px #3a3a3a;
+}
+.close:before {content:"X"}
+.close:hover {box-shadow:0 0 1px 1px #c00; background:#c00;}
+.close span {text-indent:-200em; display:block;}
+/* .popScroll {max-height:99%; overflow-y:scroll;} removed 17/07/2012 */
+.popScroll {position:absolute; top:9%; left:3%; right:3%; bottom:9%; overflow-y:auto; *overflow-y:scroll; padding-right:0.5em}
+</style>
+
+</head>
+
+<body>
+    <!-- Begin Page Content -->
+    <background="background.jpg">
+    <div id="container">
+        <form class="signupsio" action="http://signups.io/submit?key=534973294a1bfc0b0000001d" method="POST">
+    	<!-- Form elements go here -->
+
+        <form method="post" action="signup.php">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username">
+<!--
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+-->            
+            <div id="pop1" class="pop-up">
+				<div class="popBox">
+				    <div class="popScroll">
+		      		  <h2>FAQ</h2>
+				      <p>Q: Is this legal?</p>
+				      <p>A: Sure.</p>
+				      <p>&nbsp;&nbsp;Q: Isn't this sort of immoral?</p>
+				      <p>&nbsp;&nbsp;A: Yes, but so is illegally subletting.</p>
+				      <p>Q: So, two wrongs make a right?</p>
+				      <p>A: No, two wrongs make $1000.</p>
+				      <p>&nbsp;&nbsp;Q: How do I evict someone?</p>
+				      <p>&nbsp;&nbsp;A: Consult a local attorney, but please follow all local rent ordinances.</p>
+				      <p>Q: Is force acceptable in an eviction?</p>
+				      <p>A: In Florida, yes, because it's clearly a self-defense issue. In the civilized world, no, do not use force. Follow the law.</p>				      
+			    	</div>
+			    	<a href="" class="close"><span>Close</span></span></a>
+				</div>
+				<a href="#links" class="lightbox">Back to links</a>
+			</div>
+			            
+            <div id="pop2" class="pop-up">
+				<div class="popBox">
+				    <div class="popScroll">
+		      		  <h2>Pricing</h2>
+				      <p>Two pricing models:</p>
+				      <p>1: The "one-off" - $1000 for one apartment</p>
+				      <p>2: The "all you can eat" - $10,000 per year</p>
+				      <b>Note: all bounties are only payable upon successful eviction</b>
+			    	</div>
+			    	<a href="" class="close"><span>Close</span></span></a>
+				</div>
+				<a href="#links" class="lightbox">Back to links</a>
+			</div>
+			
+            <div id="pop3" class="pop-up">
+				<div class="popBox">
+				    <div class="popScroll">
+		      		  <h2>Legal</h2>
+				      <p>
+				      
+(a) Rent Allowed.
+
+(1) Except as provided in Section 37.9A(a)(2) below, any rental unit which a tenant vacates after receiving a notice to quit relying on Section 37.9(a)(13), withdrawal of rental units from rent or lease under the Ellis Act, California Government Code Sections 7060 et seq., if again offered for rent or lease, must be offered and rented or leased at a rent not greater than the lawful rent in effect at the time the notice of intent to withdraw rental units is filed with the Board, plus annual rent increases available under this Chapter 37.
+
+(A) The provisions of Section 37.9A(a)(1) apply to all tenancies commenced during either of the following time periods:
+
+(i) The five-year period after a notice of intent to withdraw the rental units is filed with the Board, whether or not the notice of intent is rescinded or the withdrawal of the units is completed pursuant to that notice;
+
+(ii) The five-year period after the rental units are withdrawn.
+
+(B) This Section 37.9(A)(a)(1) shall prevail over any conflicting provision of law authorizing the landlord to establish the rental rate upon the initial hiring of the unit.
+
+(C) If it is asserted that the rent could have been increased based on capital improvements, rehabilitation or substantial rehabilitation, the owner must petition the Rent Board pursuant to the procedures of Section 37.7 of this chapter. No increase shall be allowed on account of any expense incurred in connection with withdrawing any unit from rent or lease.
+
+(2) If a new tenancy was lawfully created in a unit before January 1, 2003, following a lawful withdrawal of the unit from rent or lease under Section 37.9(a)(13), any subsequent new tenancies for that rental unit are not subject to the rent limitations in Section 37.9A(a)(1).
+
+(b) Treatment of Replacement Units. If one or more units covered by subsection (a) is demolished, and one or more new units qualifying as rental units under this chapter but for the date on which they first receive a certificate of final completion and occupancy are constructed on the same property, and offered for rent or lease within five years of the date the last of the original units became vacant, the newly constructed units shall be offered at rents not greater than those reasonably calculated to produce a fair and reasonable return on the newly constructed units, notwithstanding Section 37.2(r)(5) or any other provision of this chapter. The provisions of this chapter shall thereafter apply. The Board shall adopt rules for determining the rents necessary to provide a fair and reasonable return.
+
+(c) Rights to Re-Rent. Any owner who again offers for rent or lease any unit covered by subsection (a) shall first offer the unit for rent or lease to the tenants or lessees displaced from the unit as follows:
+
+(1) If any tenant or lessee has advised the owner in writing within 30 days of displacement of his or her desire to consider an offer to renew the tenancy and has furnished the owner with an address to which that offer is to be directed, the owner must make such an offer whenever the unit is again offered for rent or lease within two years of withdrawal. That tenant, lessee, or former tenant or lessee may advise the owner at any time of a change of address to which an offer is to be directed.
+
+(2) Notwithstanding Subsection (c)(1), if the unit is offered for rent or lease within 10 years of withdrawal, the owner shall notify the Rent Board in writing of the intention to re-rent the unit and make an offer to the tenant or lessee whenever the tenant or lessee requests the offer in writing within 30 days after the owner has notified the City of an intention to re-rent the unit. If the unit is offered for rent or lease more than two years after the date the unit was withdrawn from rent or lease, the owner shall be liable to any tenant or lessee who was displaced for failure to comply with this subsection (c)(2), for punitive damages in an amount which does not exceed the contract rent for six months.
+
+(3) If any former tenant or lessee has requested an offer to renew the tenancy, either directly to the landlord or after notice from the Rent Board, then the owner shall offer to reinstitute a rental agreement or lease at rents permitted under Subsection (a). This offer shall be deposited in the United States mail, by registered or certified mail with postage prepaid, addressed to the displaced tenant or lessee at the address furnished to the owner as provided by the tenant and shall describe the terms of the offer. The displaced tenant or lessee shall have 30 days from the deposit of the offer in the mail to accept the offer by personal delivery of that acceptance or by deposit of the acceptance in theUnited States mail by registered or certified mail with postage prepaid.
+
+(4) If more than one tenant or lessee attempts to accept the offer for a given unit, the landlord shall notify each tenant or lessee so accepting that other acceptances have been received, and shall further advise each such tenant or lessee of the names and addresses of the others. If all such tenants or lessees do not within thirty (30) days thereafter agree and notify the landlord of which tenant(s) or lessee(s) will reoccupy the unit, the tenant(s) or lessee(s) who first occupied the unit previously shall be entitled to accept the landlord's offer. If more than one eligible tenant or lessee initially occupied the unit on the same date, then the first such tenant or lessee to have originally sent notice accepting the landlord's offer shall be entitled to occupy the unit.
+
+(d) Re-Rental Within Two Years. If a unit covered by subsection (a) is offered for rent or lease within two years of the date of withdrawal:
+
+(1) The owner shall be liable to any tenant or lessee who was displaced from the property for actual and exemplary damages. Any action by a tenant or lessee pursuant to this paragraph shall be brought within three years of withdrawal of the unit from rent or lease. However, nothing in this paragraph precludes a tenant from pursuing any alternative remedy available under the law.
+
+(2) The City may institute a civil proceeding against the owner who has again offered the unit for rent or lease, for exemplary damages for displacement of tenants or lessees. Any action by the City pursuant to this paragraph shall be brought within three years of the withdrawal of the unit from rent or lease.
+
+(e) Relocation Payments to Tenants.
+
+(1) Before August 10, 2004, Low Income, Elderly or Disabled. Where a landlord seeks eviction based upon Section 37.9(a)(13), and the notice of intent to withdraw rental units was filed with the Board before August 10, 2004, the relocation payments described in this Subsection 37.9A(e)(1) shall be limited to tenants who are members of lower income households, who are elderly, or who are disabled, as defined below.
+
+(A) Tenants who are members of lower income households, as defined by Section 50079.5 of the California Health and Safety Code, and who receive a notice to quit based upon Section 37.9(a)(13), in addition to all rights under any other provision of law, shall be entitled to receive $4,500.00, $2,250.00 of which shall be paid within fifteen (15) calendar days of the landlord's receipt of written notice from the tenants of their entitlement to the relocation payment, and $2,250.00 of which shall be paid when the tenants vacate the unit.
+
+(B) With respect to Subsection 37.9A(e)(1)(A) above, the Mayor's Office of Housing or its successor agency shall annually determine the income limits for lower income households, adjusted for household size.
+
+(C) Notwithstanding Subsection 37.9A(e)(1)(A), and irrespective of the size of the unit, any tenant who receives a notice to quit under Section 37.9(a)(13) and who, at the time such notice is served, is 62 years of age or older, or who is disabled within the meaning of Section 12955.3 of the California Government Code, shall be entitled to receive $3,000.00, $1,500.00 of which shall be paid within fifteen (15) calendar days of the landlord's receipt of written notice from the tenant of entitlement to the relocation payment, and $1,500.00 of which shall be paid when the tenant vacates the unit.
+
+(D) The payments due pursuant to this Subsection 37.9A(e)(1) for any unit which is occupied by more than one tenant shall be divided equally among all the occupying tenants, excluding those tenants who are separately entitled to payments under subsection 37.9A(e)(1)((C) above.
+
+(2) On August 10, 2004 and through February 19, 2005. Where a landlord seeks eviction based upon Section 37.9(a)(13) and either (i) the notice of intent to withdraw rental units is filed with the Board on or after August 10, 2004 through February 19, 2005 or (ii) the notice of intent to withdraw rental units was filed with the Board prior to August 10, 2004 but the tenant still resided in the unit as of August 10, 2004, relocation payments shall be paid to the tenants as follows:
+
+(A) Tenants who are members of lower income households, as defined by Section 50079.5 of the California Health and Safety Code, shall be entitled to receive $4,500.00, $2,250.00 of which shall be paid within fifteen (15) calendar days of the landlord's receipt of written notice from the tenants of their entitlement to the relocation payment, and $2,250.00 of which shall be paid when the tenants vacate the unit.
+
+(B) Subject to subsections 37.9A(e)(2)(C) and (D) below, tenants who are not members of lower income households, as defined by Section 50079.5 of the California Health and Safety Code, shall each be entitled to receive $4,500.00, which shall be paid when the tenant vacates the unit;
+
+(C) In the event there are more than three tenants in a unit, the total relocation payment shall be $13,500.00, which shall be divided equally by the number of tenants in the unit;
+
+(D) Notwithstanding Subsections 37.9A(e)(2)(A) and (B), any tenant who, at the time the notice of intent to withdraw rental units is filed with the Board, is 62 years of age or older, or who is disabled within the meaning of Section 12955.3 of the California Government Code, shall be entitled to receive an additional payment of $3,000.00, $1,500.00 of which shall be paid within fifteen (15) calendar days of the landlord's receipt of written notice from the tenant of entitlement to the relocation payment, and $1,500.00 of which shall be paid when the tenant vacates the unit.
+
+(3) On or After February 20, 2005. Where a landlord seeks eviction based upon Section 37.9(a)(13), and the notice of intent to withdraw rental units is filed with the Board on or after February 20, 2005, relocation payments shall be paid to the tenants as follows:
+
+(A) Subject to subsections 37.9A(e)(3)(B) (C) and (D) below, each tenant shall be entitled to receive $4,500.00, one-half of which shall be paid at the time of the service of the notice of termination of tenancy, and one-half of which shall be paid when the tenant vacates the unit;
+
+(B) In the event there are more than three tenants in a unit, the total relocation payment shall be $13,500.00, which shall be divided equally by the number of tenants in the unit; and
+
+(C) Notwithstanding Subsections 37.9A(e)(3)(A) and (B), any tenant who, at the time the notice of intent to withdraw rental units is filed with the Board, is 62 years of age or older, or who is disabled within the meaning of Section 12955.3 of the California Government Code, shall be entitled to receive an additional payment of $3,000.00, $1,500.00 of which shall be paid within fifteen (15) calendar days of the landlord's receipt of written notice from the tenant of entitlement to the relocation payment, and $1,500.00 of which shall be paid when the tenant vacates the unit.
+
+(D) Commencing March 1, 2005, the relocation payments specified in 37.9A(e)(3)(A) and (B) and (C) shall increase annually at the rate of increase in the "rent of primary residence" expenditure category of the Consumer Price Index (CPI) for All Urban Consumers in the San Francisco-Oakland-San Jose Region for the preceding calendar year, as that data is made available by the United States Department of Labor and published by the Board.
+
+(4) Any notice to quit pursuant to Section 37.9(a)(13) shall notify the tenant or tenants concerned of the right to receive payment under this subsection 37.9A(e)(1) or (2) or (3).
+
+(f) Notice to Rent Board; Recordation of Notice; Effective Date of Withdrawal.
+
+(1) Any owner who intends to withdraw from rent or lease any rental unit shall notify the Rent Board in writing of said intention. Said notice shall contain statements, under penalty of perjury, providing information on the number of residential units, the address or location of those units, the name or names of the tenants or lessees of the units, and the rent applicable to each residential rental unit. Said notice shall be signed by all owners of record of the property under penalty of perjury and shall include a certification that actions have been initiated as required by law to terminate existing tenancies through service of a notice of termination of tenancy. The notice must be served by certified mail or any other manner authorized by law prior to delivery to the Rent Board of the notice of intent to withdraw the rental units. Information respecting the name or names of the tenants, the rent applicable to any unit, or the total number of units, is confidential and shall be treated as confidential information by the City for purposes of the Information Practices Act of 1977, as contained in Chapter l (commencing with Section 1798) of Title 1.8 of part 4 of Division 3 of the Civil Code. The City shall, to the extent required by the preceding sentence, be considered an "agency," as defined by subdivision (b) of Section 1798.3 of the Civil Code.
+
+(2) Prior to the effective date of withdrawal of rental units under this Section, the owner shall cause to be recorded with the County Recorder a memorandum of the notice required by subsection (f)(1) summarizing its provisions, other than the confidential provisions, in substantially the following form:
+
+Memorandum of Notice
+
+Regarding Withdrawal of Rental Unit From Rent or Lease
+
+This memorandum evidences that the undersigned, as the owner of the property described in Exhibit A attached, has filed a notice, whose contents are certified under penalty of perjury, stating the intent to withdraw from rent or lease all units at said property, pursuant to San Francisco Administrative Code Section 37.9A and the Ellis Act (California Government Code Section 7060 et seq.).
+
+(Signature)
+
+(3) For a notice of intent to withdraw rental units filed with the Rent Board on or before December 31, 1999, the date on which the units are withdrawn from rent or lease for purposes of this chapter and the Ellis Act is 60 days from the delivery in person or by first-class mail of the Subsection (f)(1) notice of intent to the Rent Board.
+
+(4) For a notice of intent to withdraw rental units filed with the Rent Board on or after January 1, 2000, the date on which the units are withdrawn from rent or lease for purposes of this Chapter and the Ellis Act is 120 days from the delivery in person or by first-class mail of the Subsection (f)(1) notice of intent to the Rent Board. Except that, if the tenant or lessee is at least 62 years of age or disabled as defined in Government Code 12955.3, and has lived in his or her unit for at least one year prior to the date of delivery to the Rent Board of the Subsection (f)(1) notice of intent to withdraw, then the date of withdrawal of the unit of that tenant or lessee shall be extended to one year after the date of delivery of that notice to the Rent Board, provided that the tenant or lessee gives written notice of his or her entitlement to an extension of the date of withdrawal to the owner within 60 days of the date of delivery to the Rent Board of the Subsection (f)(1) notice of intent to withdraw. In that situation, the following provisions shall apply:
+
+(A) The tenancy shall be continued on the same terms and conditions as existed on the date of delivery to the Rent Board of the notice of intent to withdraw, subject to any adjustments otherwise available under Administrative Code Chapter 37.
+
+(B) No party shall be relieved of the duty to perform any obligation under the lease or rental agreement.
+
+(C) The owner may elect to extend the date of withdrawal on any other units up to one year after date of delivery to the Rent Board of the Subsection (f)(1) notice of intent to withdraw, subject to Subsections (f)(4)(A) and (B).
+
+(D) Within 30 days of the notification by the tenant or lessee to the owner of his or her entitlement to an extension of the date of withdrawal, the owner shall give written notice to the Rent Board of the claim that the tenant or lessee is entitled to stay in their unit for one year after the date of delivery to the Rent Board of the Subsection (f)(1) notice of intent to withdraw.
+
+(E) Within 90 days of the date of delivery to the Rent Board of the notice of intent to withdraw, the owner shall give written notice to the Rent Board and the affected tenant or lessee of the following:
+
+(i) Whether or not the owner disputes the tenant's claim of extension;
+
+(ii) The new date of withdrawal under Section 37.9A(f)(4)(C), if the owner does not dispute the tenant's claim of extension; and
+
+(iii) Whether or not the owner elects to extend the date of withdrawal to other units on the property.
+
+(5) Within 15 days of delivery of a Subsection (f)(1) notice of intent to the Rent Board, the owner shall provide notice to any tenant or lessee to be displaced of the following:
+
+(A) That the Rent Board has been notified pursuant to Subsection (f)(1),
+
+(B) That the notice to the Rent Board specified the name and the amount of rent paid by the tenant or lessee as an occupant of the rental unit;
+
+(C) The amount of rent the owner specified in the notice to the Rent Board,
+
+(D) The tenant's or lessee's rights to reoccupancy and to relocation assistance under Subsections 37.9A(c) and (e); and,
+
+(E) The rights of qualified elderly or disabled tenants as described under Subsection (f)(4), to extend their tenancy to one year after the date of delivery to the Rent Board of the Subsection (f)(1) notice of intent to withdraw.
+
+(6) Within 30 days after the effective date of withdrawal of rental units under this Section 37.9A, the Rent Board shall record a notice of constraints with the County Recorder which describes the property and the dates of applicable restrictions on the property under this Section.
+
+(g) Successor Owners. The provisions of this Section 37.9A shall apply to the owner of a rental unit at the time displacement of a tenant or tenants is initiated and to any successor in interest of the owner, subject to the provisions of Chapter 12.75 of Division 7 of Title 1 of the California Government Code (Sections 7060 et seq.).
+
+(h) Reports Required.
+
+(1) Not later than the last day of the third and sixth calendar months following the month in which notice is given to the Board under Subsection(f)(1), and thereafter not later than December 31st of each calendar year for a period of five years, beginning with the year in which the six-month notice is given, the owner of any property which contains or formerly contained one or more rental units which a tenant or tenants vacated pursuant to Section 37.9(a)(13) shall notify the Board, in writing, under penalty of perjury, for each such unit:
+
+(A) Whether the unit has been demolished;
+
+(B) If the unit has not been demolished, whether it is in use;
+
+(C) If it is in use, whether it is in residential use;
+
+(D) If it is in residential use, the date the tenancy began, the name of the tenant(s), and the amount of rent charged.
+
+If the unit has been demolished, and one or more new units constructed on the lot, the owner shall furnish the information required by items (B), (C) and (D) for each new unit. The Board shall maintain a record of the notices received under Subsection (f) and all notices received under this Section for each unit subject to this reporting requirement.
+
+(2) The Board shall notify each person who is reported as having become a tenant in a vacated or new unit subject to the reporting requirements of Subsection (h)(1) that it maintains the records described in Subsection (h)(1), and that the rent of the unit may be restricted pursuant to Subsection (a).
+
+(3) The Board shall maintain a register of all rental units withdrawn from rent or lease under the Ellis Act and the rent applicable to each unit at the time of withdrawal. The Board shall inform tenants displaced from units withdrawn from rent or lease at the address provided by the tenant, when the owner notifies the Board that the unit or replacement unit will again be offered for rent or lease within ten years of the date of withdrawal.
+
+(4) The Board may investigate whether a rental unit that was withdrawn from rent or lease has been again offered for rent or lease, and whether the owner has complied with the provisions of this Section.
+
+(i) This Section 37.9A is enacted principally to exercise specific authority provided for by Chapter 12.75 of Division 7 of Title 1 of the California Government Code, originally enacted by Stats. 1985, Ch. 1509, Section 1 (the Ellis Act, California Government Code Sections 7060 et seq.). In the case of any amendment to Chapter 12.75 or any other provision of State law which amendment is inconsistent with this Section, this Section shall be deemed to be amended to be consistent with State law, and to the extent it cannot be so amended shall be interpreted to be effective as previously adopted to the maximum extent possible.
+
+</p>
+			    	</div>
+			    	<a href="" class="close"><span>Close</span></span></a>
+				</div>
+				<a href="#links" class="lightbox">Back to links</a>
+			</div>
+			
+			<div id="pop4" class="pop-up">
+				<div class="popBox">
+				    <div class="popScroll">
+		      		  <h2>Join</h2>
+				      <p>We're hiring! Do you like to:</p>
+				      <p>o Stay in other peoples' apartments?</p>
+				      <p>o Walk the fine line of amorality?</p>
+				      <p>o Hate on the disruptionists?</p>
+			    	</div>
+			    	<a href="" class="close"><span>Close</span></span></a>
+				</div>
+				<a href="#links" class="lightbox">Back to links</a>
+			</div>				
+
+            <ul id="links">
+              <li><a href="#pop1">FAQ</a></li>
+              <li><a href="#pop2">Pricing</a></li>
+              <li><a href="#pop3">Legal</a></li>
+              <li><a href="#pop4">Join</a></li>              
+            </ul>
+            
+            <div id="lower">
+                <input type="checkbox"><label class="check" for="checkbox">I am a landlord, and am interested in hearing more about<br/>
+                 the AirBNB&#174 Bounty&#174; program</label>
+                <input type="checkbox"><label class="check" for="checkbox">I am a tenant, and am interested in hearing more about<br/>
+                 the AirBNB&#174 Anti-Bounty&#174; program</label>
+                <input type="submit" value="Sign up">
+            </div><!--/ lower-->
+            
+        </form>
+        </form>
+
+<!-- Optional Thanks Message -->
+	<div id="thanks" class="pop-up thanks">
+		<div class="popBox">Thanks for signing up!</div>
+	</div>
+    </div>
+	<!--/ container-->
+
+    <!-- End Page Content -->
+    <super>v0.2</super>
+  <script src="//cdn.signups.io/v0.3.0/signupsio.min.js"></script>
+</body>
+</html>
