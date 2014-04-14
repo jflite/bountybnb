@@ -3,6 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>BountyBNB</title>
+<style type="text/css"> 
+  .thanks {
+    display: none;
+  }
+  .signupsio.signupsio-submitted {
+    display: none;
+  }
+  .signupsio.signupsio-submitted + .thanks {
+    display: block;
+  }
+</style>
 <style>
 /* Basics */
 html, body {
@@ -186,10 +197,12 @@ input[type=submit]:active {
     <!-- Begin Page Content -->
     <background="background.jpg">
     <div id="container">
+        <form class="signupsio" action="http://signups.io/submit?key=534973294a1bfc0b0000001d" method="POST">
+    	<!-- Form elements go here -->
+
         <form method="post" action="signup.php">
             <label for="username">Email:</label>
             <input type="text" id="username" name="username">
-            
             <div id="pop1" class="pop-up">
 				<div class="popBox">
 				    <div class="popScroll">
@@ -407,8 +420,16 @@ If the unit has been demolished, and one or more new units constructed on the lo
             </div><!--/ lower-->
             
         </form>
-    </div><!--/ container-->
+
+<!-- Optional Thanks Message -->
+	<div id="thanks" class="pop-up thanks">
+		<div class="popBox">Thanks for signing up!</div>
+	</div>
+    </div>
+	<!--/ container-->
+
     <!-- End Page Content -->
-    <super>v0.1</super>
+    <super>v0.2</super>
+  <script src="//cdn.signups.io/v0.3.0/signupsio.min.js"></script>
 </body>
 </html>
