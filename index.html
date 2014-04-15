@@ -197,25 +197,27 @@ input[type=submit]:active {
     <!-- Begin Page Content -->
     <background="background.jpg">
     <div id="container">
+    	<!-- Form elements go here 
         <form class="signupsio" action="http://signups.io/submit?key=534973294a1bfc0b0000001d" method="POST">
-    	<!-- Form elements go here -->
+    	-->
+    	<form method="POST" action="signup.php"> 
 
-        <form method="post" action="signup.php">
             <label for="username">Email:</label>
             <input type="text" id="username" name="username">
+            
             <div id="pop1" class="pop-up">
 				<div class="popBox">
 				    <div class="popScroll">
 		      		  <h2>FAQ</h2>
-				      <p>Q: Is this legal?
+				      <p>Q: Is this legal?</p>
 				      <br/>A: Sure.
-				      <p>Q: Isn't this sort of immoral?
+				      <p>Q: Isn't this sort of immoral?</p>
 				      <br/>A: Yes, but so is illegally subletting.
-				      <p>Q: So, two wrongs make a right?
+				      <p>Q: So, two wrongs make a right?</p>
 				      <br/>A: No, two wrongs make $1000.
-				      <p>Q: How do I evict someone?
+				      <p>Q: How do I evict someone?</p>
 				      <br/>A: Consult a local attorney, but please follow all local rent ordinances.
-				      <p>Q: Is force acceptable in an eviction?
+				      <p>Q: Is force acceptable in an eviction?</p>
 				      <br/>A: In Florida, yes, because it's clearly a self-defense issue. In the civilized world, no, do not use force. Follow the law.
 			    	</div>
 			    	<a href="" class="close"><span>Close</span></span></a>
@@ -412,24 +414,23 @@ If the unit has been demolished, and one or more new units constructed on the lo
             </ul>
             
             <div id="lower">
-                <input type="checkbox"><label class="check" for="checkbox">I am a landlord, and am interested in hearing more about<br/>
-                 the AirBNB&#174 Bounty&#174; program</label>
-                <input type="checkbox"><label class="check" for="checkbox">I am a tenant, and am interested in hearing more about<br/>
-                 the AirBNB&#174 Anti-Bounty&#174; program</label>
+                <input type="checkbox" name="landlord" value="landlord"><label class="check" for="checkbox">I am a landlord, and am interested in hearing more about<br/>the AirBNB&#174 Bounty&#174; program</label>
+                <input type="checkbox" name="tenant" value="tenant"><label class="check" for="checkbox">I am a tenant, and am interested in hearing more about<br/>the AirBNB&#174 Anti-Bounty&#174; program</label>
                 <input type="submit" value="Sign up">
-            </div><!--/ lower-->
+            </div>
             
         </form>
 
-<!-- Optional Thanks Message -->
-	<div id="thanks" class="pop-up thanks">
+		<!-- Optional Thanks Message -->
+		<div id="thanks" class="pop-up thanks">
 		<div class="popBox">Thanks for signing up!</div>
 	</div>
+	
     </div>
 	<!--/ container-->
 
     <!-- End Page Content -->
-    <super>v0.2</super>
-  <script src="//cdn.signups.io/v0.3.0/signupsio.min.js"></script>
+    <super>v0.3</super>
+    <script src="//cdn.signups.io/v0.3.0/signupsio.min.js"></script>
 </body>
 </html>
