@@ -14,5 +14,5 @@ fwrite($fh, $data);
 
 //close the file
 fclose($fh);
-print "User Submitted";
+print "Thanks $email, you will be contacted shortly";
 ?>
