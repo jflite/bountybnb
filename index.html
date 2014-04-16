@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>BountyBNB</title>
-<style type="text/css"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>BountyBNB</title>
+	<style type="text/css"> 
   .thanks {
     display: none;
   }
@@ -14,7 +14,7 @@
     display: block;
   }
 </style>
-<style>
+	<style type="text/css">
 /* Basics */
 html, body {
     width: 100%;
@@ -24,11 +24,12 @@ html, body {
     -webkit-font-smoothing: antialiased;
     background: #f0f0f0;
     background-image:url(background.jpg);
+    background-attachment: fixed;
 }
 #container {
     position: fixed;
     width: 340px;
-    height: 350px;
+    height: 400px;
     top: 50%;
     left: 50%;
     margin-top: -140px;
@@ -190,17 +191,32 @@ input[type=submit]:active {
 /* .popScroll {max-height:99%; overflow-y:scroll;} removed 17/07/2012 */
 .popScroll {position:absolute; top:9%; left:3%; right:3%; bottom:9%; overflow-y:auto; *overflow-y:scroll; padding-right:0.5em}
 </style>
+    <script>
+        
+            function onLoad() {
+            
 
+                window.onscroll = function() {
+                    var speed = 8.0;
+                    document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+                }
+            
+
+            }
+            
+        </script>
 </head>
 
-<body>
+<body onload="onLoad()">
     <!-- Begin Page Content -->
+    
     <background="background.jpg">
     <div id="container">
+    
     	<!-- Form elements go here 
         <form class="signupsio" action="http://signups.io/submit?key=534973294a1bfc0b0000001d" method="POST">
-
     	-->
+
     	<form method="POST" action="signup.php"> 
             <label for="username">Email:</label>
             <input type="text" id="username" name="username">
@@ -212,15 +228,15 @@ input[type=submit]:active {
 				<div class="popBox">
 				    <div class="popScroll">
 		      		  <h2>FAQ</h2>
-				      <p>Q: Is this legal?</p>
+				      <p>Q: Is this legal?
 				      <br/>A: Sure.
-				      <p>Q: Isn't this sort of immoral?</p>
+				      <p>Q: Isn't this sort of immoral?
 				      <br/>A: Yes, but so is illegally subletting.
-				      <p>Q: So, two wrongs make a right?</p>
+				      <p>Q: So, two wrongs make a right?
 				      <br/>A: No, two wrongs make $1000.
-				      <p>Q: How do I evict someone?</p>
+				      <p>Q: How do I evict someone?
 				      <br/>A: Consult a local attorney, but please follow all local rent ordinances.
-				      <p>Q: Is force acceptable in an eviction?</p>
+				      <p>Q: Is force acceptable in an eviction?
 				      <br/>A: In Florida, yes, because it's clearly a self-defense issue. In the civilized world, no, do not use force. Follow the law.
 			    	</div>
 			    	<a href="" class="close"><span>Close</span></span></a>
@@ -408,32 +424,69 @@ If the unit has been demolished, and one or more new units constructed on the lo
 				</div>
 				<a href="#links" class="lightbox">Back to links</a>
 			</div>				
-<!--
-            <ul id="links">
-              <li><a href="#pop1">FAQ</a></li>
-              <li><a href="#pop2">Pricing</a></li>
-              <li><a href="#pop3">Legal</a></li>
-              <li><a href="#pop4">Join</a></li>              
-            </ul>
--->            
+            
             <div id="lower">
                 <input type="checkbox" name="landlord" value="landlord"><label class="check" for="checkbox">I am a landlord, and am interested in hearing more about<br/>the AirBNB&#174 Bounty&#174; program</label>
                 <input type="checkbox" name="tenant" value="tenant"><label class="check" for="checkbox">I am a tenant, and am interested in hearing more about<br/>the AirBNB&#174 Anti-Bounty&#174; program</label>
                 <input type="submit" value="Sign up">
+                
+                <br/><br/><br/><br/><br/>
+                <center>
+                 <a href="#pop1">FAQ</a>&nbsp;|
+                 <a href="#pop2">Pricing</a>&nbsp;|
+                 <a href="#pop3">Legal</a>&nbsp;|
+                 <a href="#pop4">Join</a>
+                </center>
+              
             </div>
             
         </form>
-
+    
 		<!-- Optional Thanks Message -->
 		<div id="thanks" class="pop-up thanks">
-		<div class="popBox">Thanks for signing up!</div>
-	</div>
-	
+			<div class="popBox">Thanks for signing up!</div>
+		</div>
+              	
     </div>
 	<!--/ container-->
 
-    <!-- End Page Content -->
+<h3>
+Lorem ipsum dolor sit amet, suas graeci verear pri et. Assum incorrupte vel an. Nec an habemus mediocrem philosophia. Iusto dictas torquatos ut quo, id qui soleat principes. Qui idque mollis doctus ad, vis summo bonorum no. Prompta percipitur reformidans eum cu.
+
+Cu nec enim conceptam, ei ius soleat detraxit delicatissimi. Cum et sapientem periculis cotidieque, sed no dicat denique, ne mea mundi nominati. Ad cum mundi mandamus dissentiet, ignota graeco an sea, ei has nibh malis impetus. Aeque laoreet pertinax at quo, ex minim repudiandae eos, dolor ponderum persecuti eos ad. Modo accusata id usu. Eos te quem quas.
+
+Sed ne nostrum deserunt urbanitas, inani vocibus voluptatum vix et. Odio possit iudicabit ut eam, verear iuvaret periculis nec at. Ad eros iracundia efficiendi pri, diceret atomorum eum in, ius ad quidam timeam delectus. Eius laudem semper mel eu, ei essent appareat nam. Ut mei possit suscipit, vix modo referrentur ad, populo dolores vis cu. Sit ut porro summo.
+
+Quidam epicuri persecuti ut duo. An usu ponderum corrumpit. Et ius cetero graecis pertinax, vix accusata scribentur persequeris ea, mollis posidonium disputationi id nec. An cum mazim sonet consulatu, cu denique eligendi petentium nec, vim fabulas commune intellegebat at.
+
+Summo nobis at qui. Impedit appareat in eam, ei pri erant delectus persequeris, soleat vivendum torquatos ius in. Pri abhorreant dissentias adversarium ex, quot propriae phaedrum ea duo. Quaeque molestie vis an, id illum eleifend gubergren eos. Cu aeque doming dissentias cum. Vidit liber est ut.
+
+Lorem ipsum dolor sit amet, suas graeci verear pri et. Assum incorrupte vel an. Nec an habemus mediocrem philosophia. Iusto dictas torquatos ut quo, id qui soleat principes. Qui idque mollis doctus ad, vis summo bonorum no. Prompta percipitur reformidans eum cu.
+
+Cu nec enim conceptam, ei ius soleat detraxit delicatissimi. Cum et sapientem periculis cotidieque, sed no dicat denique, ne mea mundi nominati. Ad cum mundi mandamus dissentiet, ignota graeco an sea, ei has nibh malis impetus. Aeque laoreet pertinax at quo, ex minim repudiandae eos, dolor ponderum persecuti eos ad. Modo accusata id usu. Eos te quem quas.
+
+Sed ne nostrum deserunt urbanitas, inani vocibus voluptatum vix et. Odio possit iudicabit ut eam, verear iuvaret periculis nec at. Ad eros iracundia efficiendi pri, diceret atomorum eum in, ius ad quidam timeam delectus. Eius laudem semper mel eu, ei essent appareat nam. Ut mei possit suscipit, vix modo referrentur ad, populo dolores vis cu. Sit ut porro summo.
+
+Quidam epicuri persecuti ut duo. An usu ponderum corrumpit. Et ius cetero graecis pertinax, vix accusata scribentur persequeris ea, mollis posidonium disputationi id nec. An cum mazim sonet consulatu, cu denique eligendi petentium nec, vim fabulas commune intellegebat at.
+
+Summo nobis at qui. Impedit appareat in eam, ei pri erant delectus persequeris, soleat vivendum torquatos ius in. Pri abhorreant dissentias adversarium ex, quot propriae phaedrum ea duo. Quaeque molestie vis an, id illum eleifend gubergren eos. Cu aeque doming dissentias cum. Vidit liber est ut.
+
+Lorem ipsum dolor sit amet, suas graeci verear pri et. Assum incorrupte vel an. Nec an habemus mediocrem philosophia. Iusto dictas torquatos ut quo, id qui soleat principes. Qui idque mollis doctus ad, vis summo bonorum no. Prompta percipitur reformidans eum cu.
+
+Cu nec enim conceptam, ei ius soleat detraxit delicatissimi. Cum et sapientem periculis cotidieque, sed no dicat denique, ne mea mundi nominati. Ad cum mundi mandamus dissentiet, ignota graeco an sea, ei has nibh malis impetus. Aeque laoreet pertinax at quo, ex minim repudiandae eos, dolor ponderum persecuti eos ad. Modo accusata id usu. Eos te quem quas.
+
+Sed ne nostrum deserunt urbanitas, inani vocibus voluptatum vix et. Odio possit iudicabit ut eam, verear iuvaret periculis nec at. Ad eros iracundia efficiendi pri, diceret atomorum eum in, ius ad quidam timeam delectus. Eius laudem semper mel eu, ei essent appareat nam. Ut mei possit suscipit, vix modo referrentur ad, populo dolores vis cu. Sit ut porro summo.
+
+Quidam epicuri persecuti ut duo. An usu ponderum corrumpit. Et ius cetero graecis pertinax, vix accusata scribentur persequeris ea, mollis posidonium disputationi id nec. An cum mazim sonet consulatu, cu denique eligendi petentium nec, vim fabulas commune intellegebat at.
+
+Summo nobis at qui. Impedit appareat in eam, ei pri erant delectus persequeris, soleat vivendum torquatos ius in. Pri abhorreant dissentias adversarium ex, quot propriae phaedrum ea duo. Quaeque molestie vis an, id illum eleifend gubergren eos. Cu aeque doming dissentias cum. Vidit liber est ut.
+</h3>
+
+<!--
     <super>v0.4</super>
     <script src="//cdn.signups.io/v0.3.0/signupsio.min.js"></script>
+-->
+
+    <!-- End Page Content -->    
 </body>
 </html>
