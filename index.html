@@ -40,6 +40,23 @@ html, body {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 	
 }
+#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #DDEEEE; 
+       width: 100%; 
+     }
+#banner-content { 
+       width: 800px; 
+       margin: 0 auto; 
+       padding: 10px; 
+       /* border: 1px solid #000; */
+     }
+#main-content { 
+       padding-top: 70px;
+    }
+
 form {
     margin: 0 auto;
     margin-top: 20px;
@@ -191,9 +208,8 @@ input[type=submit]:active {
 /* .popScroll {max-height:99%; overflow-y:scroll;} removed 17/07/2012 */
 .popScroll {position:absolute; top:9%; left:3%; right:3%; bottom:9%; overflow-y:auto; *overflow-y:scroll; padding-right:0.5em}
 </style>
-    <script>
-        
-            function onLoad() {
+	<script>
+		function onLoad() {
             
 
                 window.onscroll = function() {
@@ -203,14 +219,18 @@ input[type=submit]:active {
             
 
             }
-            
-        </script>
+	</script>
 </head>
 
 <body onload="onLoad()">
     <!-- Begin Page Content -->
     
     <background="background.jpg">
+    <div id="banner">
+    	<div id="banner-content">
+    	This is your banner text, centered and fixed at 800px in width
+    	</div>
+  	</div>
     <div id="container">
     
     	<!-- Form elements go here 
@@ -443,7 +463,8 @@ If the unit has been demolished, and one or more new units constructed on the lo
                  <a href="#pop1">FAQ</a>&nbsp;|
                  <a href="#pop2">Pricing</a>&nbsp;|
                  <a href="#pop3">Legal</a>&nbsp;|
-                 <a href="#pop4">Join</a>
+                 <a href="#pop4">Join</a>&nbsp;|
+                 <a href="blog.html">Blog</a>
                 </center>
               
             </div>
